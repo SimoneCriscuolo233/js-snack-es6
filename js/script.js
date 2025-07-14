@@ -35,3 +35,41 @@ const result = (ob) => {
 result(lighter)
 document.body.appendChild(weigthResult)
 console.log(weigthResult)
+
+const squads = [
+  {
+    name: `Inter`,
+    pointsScored: 0,
+    foulsSuffered: 0
+  },
+  {
+    name: `Milan`,
+    pointsScored: 0,
+    foulsSuffered: 0
+  },
+  {
+    name: `Napoli`,
+    pointsScored: 0,
+    foulsSuffered: 0
+  },
+  {
+    name: `Juventus`,
+    pointsScored: 0,
+    foulsSuffered: 0
+  }
+];
+
+for (let i = 0; i < squads.length; i++) {
+  squads[i].pointsScored = Math.floor(Math.random() * 100)
+  squads[i].foulsSuffered = Math.floor(Math.random() * 30)
+};
+let squadsFouls = [];
+for (let i = 0; i < squads.length; i++) {
+  squadsFouls.push({
+    nome: squads[i].name,
+    foulsSuffered: squads[i].foulsSuffered
+  });
+};
+console.log(squads, squadsFouls)
+
+
